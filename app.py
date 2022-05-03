@@ -21,7 +21,7 @@ from logic import format_db_row_to_transaction
 
 #CONFIG INICIAIS
 app = Flask(__name__)
-app.config.from_object(DevelopmentConfig)
+app.config.from_object(ProductionConfig)
 jwt = JWTManager(app)
 db = SQLAlchemy(app)
 db.init_app(app)
