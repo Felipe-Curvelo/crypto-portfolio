@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>Reset Password Email Template</title>
+    <meta name="description" content="Reset Password Email Template.">
+    <title>Document</title>
+    <style type="text/css">
+        a:hover {text-decoration: underline !important;}
+        .button {
+            border: 5px;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            margin-top: 50px;
+            cursor: pointer;
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius:50px
+          }
+          
+          .button1 {background-color: #9932CC;}
+          .button1:hover {
+            background-color: #BA55D3;
+          }
+
+
+          
+    </style>
+</head>
+<body class="bg-light" marginheight="0" topmargin="0" marginwidth="0" style="margin: 0px; background-color: #f2f3f8;" leftmargin="0">
+    <div width="100%" bgcolor="#f2f3f8"
+    style="@import url(https://fonts.googleapis.com/css?family=Rubik:300,400,500,700|Open+Sans:300,400,600,700); font-family: 'Open Sans', sans-serif;">
+        <div class="container">
+             <a><img src="https://i.ibb.co/gSX4W6R/Logo.png" alt="Logo" border="0"></a>
+            <div class="card p-6 p-lg-10 space-y-4">
+                <h1 class="h3 fw-700">
+                    Reset de senha
+                </h1>
+                <p style="color:#455056; font-size:15px;line-height:24px; margin:0; margin-bottom:15px">
+                    Olá! Estamos enviando este email atendendo seu pedido de reset de senha.
+                </p>
+                <p style="color:#455056; font-size:15px;line-height:24px; margin:0; margin-bottom:15px">
+                    Se você não pediu para sua senha ser resetada, por favor, ignore este e-mail.
+                </p>
+                <p style="color:#455056; font-size:15px;line-height:24px; margin:0; margin-bottom:15px">
+                    Para definir uma nova senha, clique no botão abaixo e iremos te redirecionar.
+                </p>
+                <div>
+                    <a class="button button1 ax-center mt-5 w-40" href="{{ url_for('redirect_route',token=token,_external=True) }}" role="button">Link</a>
+                </div>
+            </div>
+            <div class="text-muted text-center my-6">
+                <br>
+                Ghost Portfolio <br>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
