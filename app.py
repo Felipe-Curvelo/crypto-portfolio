@@ -582,19 +582,7 @@ def webhook():
         # Send an email to the customer asking them to retry their order
         email_customer_about_failed_payment(session)
 
-    if event['type'] == 'invoice.payment.succeeded':
-        email = event['data']['object']['customer_email']
-        customer_id = event['data']['object']['customer']
-        paid = event['data']['object']['paid']
-
-        database_stripeusers = userstripe.query.filter_by(stripeCustomerId=customer_id).first()
-        database_stripeusers.paymentStatus = paid
-        db.session.commit()
-        
-    
-        print(email, customer_id)
-    
-    if event['type'] == 'invoice.payment.succeeded':
+    if event['type'] == 'invoice.payment_succeeded':
         email = event['data']['object']['customer_email']
         customer_id = event['data']['object']['customer']
         paid = event['data']['object']['paid']
